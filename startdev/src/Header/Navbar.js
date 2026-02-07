@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
+import navLogo from '../assets/navLogo.png';
 
 function Navbar({onNavigate }) {
 
@@ -23,40 +24,30 @@ function Navbar({onNavigate }) {
 
   return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
-          <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="max-w-7xl mx-auto px-6 py-4 sm:px-8 lg:px-12">
             <div className="flex items-center justify-between">
               {/* Logo */}
               <button
                 onClick={() => handleNavClick('home')}
-                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-                title="Vegas Comedy Club"
+                className="w-2/12 flex items-center gap-2 hover:opacity-80 transition-opacity"
+                // title="Vegas Comedy Club"
               >
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  {/* Background circle */}
-                  <circle cx="24" cy="24" r="22" fill="#8B1538" stroke="#D4AF37" strokeWidth="2"/>
-                  
-                  {/* Stage spotlight effect */}
-                  <path d="M24 8 L30 18 L18 18 Z" fill="#D4AF37" opacity="0.9"/>
-                  
-                  {/* Microphone stand */}
-                  <rect x="22" y="18" width="4" height="14" fill="#D4AF37"/>
-                  <circle cx="24" cy="18" r="3" fill="#F5D76E"/>
-                  
-                  {/* Comedy masks hint - curved lines */}
-                  <path d="M16 28 Q14 26 14 24" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                  <path d="M32 28 Q34 26 34 24" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                  
-                  {/* Sparkle accents */}
-                  <circle cx="12" cy="12" r="1.5" fill="#F5D76E"/>
-                  <circle cx="36" cy="12" r="1.5" fill="#F5D76E"/>
-                  <circle cx="12" cy="36" r="1.5" fill="#F5D76E"/>
-                  <circle cx="36" cy="36" r="1.5" fill="#F5D76E"/>
-                </svg>
-                <span className="font-display text-xl font-bold text-[#8B1538] hidden sm:inline">Vegas</span>
+                <img
+                  src= {navLogo}
+                  alt="navLogo"
+                  className="scale-100 rounded-3xl"
+                  loading="lazy"
+                  onError={(e) => {
+                    console.error('Image failed to load:', e.target.src);
+                    e.target.style.background = '#6B4C7C';
+                    e.target.alt = 'Image unavailable';
+                  }}
+                />
+                {/* <span className="font-display text-xl font-bold text-[#8B1538] hidden sm:inline">Vegas</span> */}
               </button>
 
               {/* Desktop Menu */}
-              <div className="hidden md:flex items-center gap-8">
+              <div className="w-3/4 text-sm hidden md:flex items-center gap-8">
                 <button
                   onClick={() => handleNavClick('home')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors"
@@ -67,7 +58,7 @@ function Navbar({onNavigate }) {
                   onClick={() => handleNavClick('about-bobby')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors"
                 >
-                  About Bobby
+                  About
                 </button>
                 <button
                   onClick={() => handleNavClick('events')}
@@ -85,7 +76,7 @@ function Navbar({onNavigate }) {
                   onClick={() => handleNavClick('making-sense')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors"
                 >
-                  Making Sense
+                  Podcast
                 </button>
                 <button
                   onClick={() => handleNavClick('resources')}
@@ -125,7 +116,7 @@ function Navbar({onNavigate }) {
                   onClick={() => handleNavClick('about-bobby')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors text-left"
                 >
-                  About Bobby
+                  About Us
                 </button>
                 <button
                   onClick={() => handleNavClick('events')}
@@ -143,7 +134,7 @@ function Navbar({onNavigate }) {
                   onClick={() => handleNavClick('making-sense')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors text-left"
                 >
-                  Making Sense
+                  Making Sense with Sanchez & Slaughter
                 </button>
                 <button
                   onClick={() => handleNavClick('resources')}
