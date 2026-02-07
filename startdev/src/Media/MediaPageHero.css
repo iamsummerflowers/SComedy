@@ -1,0 +1,31 @@
+:root {
+    --main-bg-color: #a0a4b8; 
+    --main-vert: 2.5rem;
+    --holdsAllCards-vert: 2.5rem;
+    --holdsAllCards-horz: 2.5rem;
+    --holdsAllCards-gap: 1rem;
+    --title-font: "Gugi", sans-serif;
+    --title-fontSize: 2.5rem;
+    --title-fontColor: black;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+
+/*---------- Smaller Screen ----------*/
+@media (min-width: 888px) {
+
+
+  
+  }
+
+/*---------- XXL ----------*/
+@media (min-width: 1440px) {
+
+
+}

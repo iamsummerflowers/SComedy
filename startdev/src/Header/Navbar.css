@@ -1,0 +1,14 @@
+:root {
+--header-vert: 2.5rem;
+--header-bg-color: #a0a4b8;
+--header-font: "Open Sans", sans-serif;
+--header-fontSize: 1rem;
+--header-fontColor: black;
+--header-border: solid 2px #a0a4b8;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    width: 100%;
+  }
+

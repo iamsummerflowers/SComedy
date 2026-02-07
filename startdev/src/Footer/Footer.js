@@ -1,27 +1,21 @@
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
-import { VscGithub } from "react-icons/vsc";
+import { useState } from 'react';
+import {footerConfig} from '../Data/footerConfig';
 
 
-function Footer() {
-    return (
-      <div className="footer">
-        <div className="footerLeft">
-          <Link className="link" id="twos" to="https://www.theworksofsummer.com/" target="_blank" rel="noopener noreferrer">theworksofsummer.com</Link>
-        </div>
-        <div className="footerRight">
-          <p id="sb">
-            <p id="sb-text">START BUILDING</p> 
-            <Link className="link" id="iconGH" to="https://github.com/iamsummerflowers" target="_blank" rel="noopener noreferrer">
-              <VscGithub />
-            </Link>
-          </p>
-          
-        </div>
 
-      </div>
-    );
-  }
+function Footer({ config = footerConfig }) {
+
   
-  export default Footer;
+  return (
+        <footer className="py-8 px-6 bg-[#1a1a1a] border-t border-[#D4AF37]/20">
+          <div className="max-w-7xl mx-auto text-center">
+            <p className="text-[#D4AF37] font-display text-xl mb-2">{config.tagline}</p>
+            <p className="text-[#F5F5DC]/60 text-sm">{config.copyright}</p>
+          </div>
+        </footer>
+  );
+}
+
+export default Footer;
