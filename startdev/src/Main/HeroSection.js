@@ -41,9 +41,9 @@ function HeroSection({ onNavigate, config = heroConfig }) {
 
   
   return (
-        <section className="relative h-screen min-h-[600px] overflow-hidden pt-20">
+        <section className="h-screen min-h-full overflow-hidden pt-20 max-w-7xl mx-auto">
           {/* Media Carousel */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 overflow-hidden">
             {config.media.map((item, index) => (
               <div
                 key={index}
@@ -85,33 +85,15 @@ function HeroSection({ onNavigate, config = heroConfig }) {
             </p>
             <button
               onClick={() => {}}
-              className="gold-gradient text-[#2B2B2B] font-semibold px-10 py-4 rounded-full text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: '0.4s' }}
+              className="w-fit gold-gradient text-[#2B2B2B] font-semibold px-10 py-4 rounded-full text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in"
+              style={{ animationDelay: '0.2s' }}
             >
               {config.buttonText}
             </button>
           </div>
 
-          {/* Carousel Controls */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-40 bg-[#8B1538]/80 hover:bg-[#8B1538] text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-40 bg-[#8B1538]/80 hover:bg-[#8B1538] text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
           {/* Dots Indicator */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 flex gap-3">
+          <div className="absolute flex items-center justify-center bottom-10 left-1/2 -translate-x-1/2 z-40 flex gap-3">
             {config.media.map((_, index) => (
               <button
                 key={index}
