@@ -1,4 +1,4 @@
-// import videoURL from "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+import image1 from '../assets/servicesConfigImage1.jpg';
 // import videoPoster from "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=800&fit=crop";
 
 export const blurb5Config   = {
@@ -19,6 +19,6 @@ export const blurb5Config   = {
         }
       ],
       buttonText: "See All Services",
-      image: '../assets/heroImage1.jpg'
+      image: image1
 
 };

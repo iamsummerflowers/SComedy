@@ -1,13 +1,14 @@
-// import longImage from "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=1200&h=400&fit=crop";
-// import squareImage from "https://images.unsplash.com/photo-1485872299829-c673f5194813?w=400&h=400&fit=crop";
+import image1 from '../assets/blurb1ConfigImage1.jpg';
+import image2 from '../assets/blurb2ConfigImage2.jpg';
+import image3 from '../assets/blurb2ConfigImage3.jpg';
 
 export const blurb2Config  = {
 
       heading: "Everything in One Place",
       subheading: "Convenient Access to Everything You Need",
-      paragraph: "From booking your tickets to enjoying craft cocktails and gourmet bites, we've designed our venue to be your complete entertainment destination. Our state-of-the-art facilities include premium seating, full bar service, and VIP experiences that elevate your night out.",
+      paragraph: "We signed a six-month agreement with Slaughter Comedy with an option to have Slaughter Comedy produce and promote increased business operations by establishing entertainment at Pop’s OMD Theater. Since signing an agreement with Bobby, we’ve witnessed a dramatic increase in foot traffic and the bottom line to business profits. Bobby now plans and produces comedy shows, he has the technical expertise to assist the company in establishing a business web presence on the internet and social media sites. Our overall business has seen a 45% increase in sales and we continue to see new business.",
       buttonText: "See Testimonials",
-      longImage: '../assets/heroImage1.jpg',
-      squareImage: '../assets/heroImage1.jpg'
+      longImage: image2,
+      squareImage: image3
 
 };

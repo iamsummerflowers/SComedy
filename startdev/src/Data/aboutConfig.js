@@ -1,11 +1,12 @@
-// import ownerImage from "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face";;
+import image1 from '../assets/aboutConfigImage1.jpg';
 
 
 export const aboutConfig = {
       heading: "About Us",
-      paragraph: "Vegas Comedy Club has been the heartbeat of underground comedy in Las Vegas for over a decade. Founded by passionate comedy lovers, we've created a space where emerging talent meets legendary performers, and where every night promises unforgettable laughter. Our intimate venue captures the essence of classic comedy clubs while embracing the vibrant energy that only Vegas can offer.",
-      ownerImage: '../assets/heroImage1.jpg',
-      ownerName: "Joe Smith",
+      paragraph1: "Slaughter Comedy is a veteran-operated Limited Liability Entertainment Company in Las Vegas, Nevada that produces & promotes tailorable comedy shows for small to medium-sized businesses and theaters.",
+      paragraph2: "As CEO of Slaughter Comedy, I manage all aspects of event production, from talent search and selection of the comedians and entertainers to establishing top-notch talent rosters for venues. When I'm not producing shows, I’m working to improve my comedic craft around Las Vegas.",   
+      ownerImage: image1,
+      ownerName: "Bobby Slaughter",
       ownerTitle: "Founder & Owner",
       buttonText: "Learn More",
       socials: [

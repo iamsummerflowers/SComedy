@@ -22,12 +22,12 @@ function BlurbSection5({ onNavigate, config = blurb5Config }) {
                     </li>
                   ))}
                 </ul>
-                <button
+                {/* <button
                   onClick={() => onNavigate('services')}
                   className="gold-gradient text-[#2B2B2B] font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
                 >
                   {config.buttonText}
-                </button>
+                </button> */}
               </div>
               <div className="relative">
                 <img

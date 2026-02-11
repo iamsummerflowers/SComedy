@@ -7,7 +7,7 @@ function BlurbSection4({ onNavigate, config = blurb4Config }) {
 
   
   return (
-        <section className="py-20 px-6 bg-gradient-to-b from-[#2B2B2B] to-[#1a1a1a]">
+        <section className="py-20 px-6 bg-[#3D3D3D] xxbg-gradient-to-b xxfrom-[#2B2B2B] xxto-[#1a1a1a]">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Video */}
@@ -29,7 +29,7 @@ function BlurbSection4({ onNavigate, config = blurb4Config }) {
                   {config.heading}
                 </h2>
                 <p className="text-lg text-[#F5F5DC]/80 mb-8">
-                  {config.paragraph}
+                  {/* {config.paragraph} */}
                 </p>
                 <ul className="space-y-4 mb-10">
                   {config.events.map((event, index) => (
@@ -41,7 +41,7 @@ function BlurbSection4({ onNavigate, config = blurb4Config }) {
                 </ul>
                 <button
                   onClick={() => onNavigate('events')}
-                  className="burgundy-gradient text-white font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  className="w-fit burgundy-gradient text-white font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
                 >
                   {config.buttonText}
                 </button>

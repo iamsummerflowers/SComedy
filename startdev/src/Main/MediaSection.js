@@ -69,7 +69,7 @@ function MediaSection({ onNavigate, config = mediaConfig }) {
             <div className="text-center">
               <button
                 onClick={() => onNavigate('media')}
-                className="burgundy-gradient text-white font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="w-fit gold-gradient text-[#2B2B2B] font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 {config.buttonText}
               </button>

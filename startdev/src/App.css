@@ -70,6 +70,9 @@ html {
     .burgundy-gradient {
       background: linear-gradient(135deg, #8B1538 0%, #A91E4A 50%, #8B1538 100%);
     }
+    .blue-gradient {
+      background: linear-gradient(135deg, #51448a 0%, #51448a 50%, #51448a 100%);
+    }
     .modal-backdrop {
       background: rgba(0,0,0,0.9);
       backdrop-filter: blur(10px);
@@ -146,7 +149,7 @@ html {
 @media (min-width: 1440px) {
 
   .App {
-      max-width: 1440px;
+      /* min-width: 1440px; */
       margin: 0 auto;
   }
 
