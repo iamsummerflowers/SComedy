@@ -6,21 +6,54 @@ import navLogo from '../assets/navLogo.png';
 
 function Navbar({onNavigate }) {
 
+const [scrollToContact, setScrollToContact] = useState(false);
+
+
+useEffect(() => {
+    if (scrollToContact) {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        setTimeout(() => {
+          window.scrollTo({ 
+            top: contactSection.offsetTop, 
+            behavior: 'smooth' 
+          });
+        }, 100);
+      }
+      setScrollToContact(false);
+    }
+  }, [scrollToContact]);
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = (target) => {
-    setIsOpen(false);
-    if (target === 'contact') {
-      window.scrollTo({ top: document.getElementById('contact-section')?.offsetTop || 0, behavior: 'smooth' });
-    } else if (target === 'home') {
-      onNavigate('home');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      onNavigate(target);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
+  // const handleNavClick = (target) => {
+  //   setIsOpen(false);
+  //   if (target === 'contact') {
+  //     window.scrollTo({ top: document.getElementById('contact-section')?.offsetTop || 0, behavior: 'smooth' });
+  //   } else if (target === 'home') {
+  //     onNavigate('home');
+  //     window.scrollTo({ top: 0, behavior: 'smooth' });
+  //   } else {
+  //     onNavigate(target);
+  //     window.scrollTo({ top: 0, behavior: 'smooth' });
+  //   }
+  // };
+
+const handleNavClick = (target) => {
+  setIsOpen(false);
+  
+  if (target === 'contact') {
+    onNavigate('home');
+    setScrollToContact(true); // Trigger scroll after navigation
+  } else if (target === 'home') {
+    onNavigate('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    onNavigate(target);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+};
+
 
   return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">

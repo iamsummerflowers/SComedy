@@ -77,7 +77,7 @@ function App() {
               <BlurbSection4 onNavigate={handleNavigate} />
               <BlurbSection5 onNavigate={handleNavigate} />
               <MediaSection onNavigate={handleNavigate} />
-              <ContactSection />
+              <ContactSection onNavigate={handleNavigate}/>
               <Footer />
               <ScrollToTop />
             </>
@@ -108,7 +108,7 @@ function App() {
               <ScrollToTop />
             </>
           )}
-          {currentPage === 'contact' && (
+          {/* {currentPage === 'contact' && (
             <div className="min-h-screen flex flex-col items-center justify-center p-8">
               <h1 className="font-display text-5xl text-[#D4AF37] mb-8">Contact Page</h1>
               <p className="text-[#F5F5DC] text-xl mb-8">Contact details coming soon...</p>
@@ -116,7 +116,7 @@ function App() {
                 Back to Home
               </button>
             </div>
-          )}
+          )} */}
         {currentPage === 'events' && (
             <>
               {/* <HeroSection config={{
@@ -127,7 +127,7 @@ function App() {
                   { type: 'image', src: image1, alt: 'Comedy Stage' }
                 ]
               }} onNavigate={handleNavigate} /> */}
-              <EventsHero/>
+              <EventsHero onNavigate={handleNavigate}/>
               <CurrentEventsSection />
               <UpcomingEventsSection />
               <PastEventsSection />
@@ -147,7 +147,7 @@ function App() {
           )} */}
           {currentPage === 'media' && (
             <>
-              <MediaPageHero />
+              <MediaPageHero onNavigate={handleNavigate}/>
               <MediaGallerySection />
               <SingleVideoSection />
               <DoubleVideoSection />
@@ -157,11 +157,11 @@ function App() {
           )}
           {currentPage === 'making-sense' && (
             <>
-              <MakingSenseHero />
+              <MakingSenseHero onNavigate={handleNavigate}/>
               <MakingSenseShowSection />
               <MakingSenseAboutSection />
               <SlaughterComedySection />
-              <ContactSection />
+              {/* <ContactSection /> */}
               <Footer />
               <ScrollToTop />
             </>
