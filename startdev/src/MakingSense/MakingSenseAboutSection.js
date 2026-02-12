@@ -1,6 +1,7 @@
 import React from 'react';
 import './MakingSenseAboutSection.css';
 import { useState, useEffect } from 'react';
+import image3 from '../assets/podcastPageImage3.jpg';
 
 
 
@@ -13,26 +14,26 @@ function MakingSenseAboutSection() {
               {/* Text Left */}
               <div className="space-y-6">
                 <h2 className="font-display text-5xl font-bold text-[#D4AF37]">
-                  Sebastian's Vision
+                  Sebastian Sanchez
                 </h2>
                 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Sebastian brings years of comedic experience and a sharp eye for talent to "Making Sense." His authentic approach to interviewing and his genuine passion for comedy shine through every episode, creating an atmosphere where guests feel comfortable sharing their real stories.
+                  Sebastian is a Chilean immigrant, a world traveler and public servant who was raised in Miami, but currently resides in Las Vegas. As a former illegal immigrant, for many years his life revolved around uncertainty. Despite limited opportunities, Sebastian was able to earn a full scholarship to Florida State University where he earned a Bachelor of Science in Finance and a minor in Italian in 2008.
                 </p>
 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  With roots deep in the Vegas comedy scene, Sebastian understands what it takes to make it in this industry. He's dedicated to elevating comedy conversations and giving comedians a platform to share their journey, their struggles, and their triumphs.
+                  Sebastian began his career working for a major for-profit university, where he became aware of the exploitation of vulnerable Americans within the educational system. Despite a promising career, he resigned from his job to pursue his passion for teaching minorities in neglected communities. In 2012, Sebastian earned a Master of Arts in English from National University which allowed him to transition into teaching college courses at Miami-Dade College and Strayer University. He currently works as a high school teacher and volunteers his time as an EMT Firefighter.
                 </p>
 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Through "Making Sense with Sanchez," Sebastian is building a community of comedy enthusiasts and creators who appreciate the artistry and dedication behind every punchline. It's not just a show—it's a movement that's redefining what comedy podcasts can be.
+                  In 2020, Sebastian decided to combine his passion for service with his comedic persona and created The Minority Report. In collaboration with Bobby Slaughter, Sebastian aims to educate and inspire disenfranchised Americans from all economic backgrounds. When he is not recording, teaching, or working in an ambulance, you may be able to catch his stand up at local open mics and comedy clubs in Las Vegas.
                 </p>
               </div>
 
               {/* Image Right */}
               <div className="flex justify-center">
                 <img
-                  src='../assets/heroImage1.jpg'
+                  src={image3}
                   alt="Sebastian"
                   className="w-full max-w-md h-auto rounded-2xl shadow-2xl border-4 border-[#D4AF37] object-cover"
                   loading="lazy"
@@ -42,7 +43,16 @@ function MakingSenseAboutSection() {
                     e.target.alt = 'Image unavailable';
                   }}
                 />
+                
               </div>
+
+                                <a
+                    href="https://www.facebook.com/people/Making-Sense-with-Sanchez-Slaughter/100064042992396/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mx-auto flex w-fit burgundy-gradient text-white font-bold px-8 py-4 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center"
+                  >Follow Making Sense with Sanchez and Slaughter
+                  </a>
             </div>
           </div>
         </section>

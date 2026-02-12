@@ -2,6 +2,7 @@ import React from 'react';
 import './SlaughterComedySection.css';
 import { useState, useEffect } from 'react';
 
+import image3 from '../assets/podcastPageImage4.jpg';
 
 
 function SlaughterComedySection() {
@@ -10,13 +11,14 @@ function SlaughterComedySection() {
   return (
         <section className="py-20 px-6 bg-gradient-to-b from-[#1a1a1a] to-[#2B2B2B]">
           <div className="max-w-7xl mx-auto">
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Image Left */}
               <div className="flex justify-center">
                 <img
-                  src='../assets/heroImage1.jpg'
-                  alt="Slaughter Comedy"
-                  className="w-full max-w-sm h-auto rounded-2xl shadow-2xl border-4 border-[#D4AF37] object-cover"
+                  src={image3}
+                  alt="Dog Tags with Slaughter Comedy engraved on them"
+                  className="w-full h-full md:h-[500px] object-auto rounded-2xl shadow-2xl border-4 border-[#D4AF37]"
                   loading="lazy"
                   onError={(e) => {
                     console.error('Image failed to load:', e.target.src);
@@ -28,21 +30,35 @@ function SlaughterComedySection() {
 
               {/* Text Right */}
               <div className="space-y-6">
+
                 <h2 className="font-display text-5xl font-bold text-[#D4AF37]">
                   Slaughter Comedy
                 </h2>
+
+                              <div className="order-first">
+                {/* <img
+                  src={image3}
+                  alt="Dog Tags with Slaughter Comedy engraved on them"
+                  className="w-full h-full md:h-[500px] object-auto rounded-2xl shadow-2xl border-4 border-[#D4AF37]"
+                  loading="lazy"
+                  onError={(e) => {
+                    console.error('Image failed to load:', e.target.src);
+                    e.target.style.background = '#8B1538';
+                    e.target.alt = 'Image unavailable';
+                  }}
+                /> */}
+              </div>
                 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Slaughter Comedy is where the magic happens. Our brand represents the cutting edge of comedy—fierce, unafraid, and absolutely hilarious. We're committed to showcasing the most talented and entertaining performers in the industry.
+                  A Vetrepreneur, Comedian and businessperson dedicated to promoting local comedy and comics in Las Vegas to bring some laughter to all communities. Slaughter Comedy is a member of the Las Vegas Metro Chamber of Commerce and licensed as a Limited Liability Company in the State of Nevada and licensed as a promoter in Clark Country. Additionally, Slaughter Comedy maintains a licensed membership with the American Society of Composers, Authors, and Publishers.
                 </p>
-
-                <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Every show is a celebration of comedic excellence. From intimate performances to packed-out spectacles, Slaughter Comedy delivers moments that will stay with you long after the laughter fades. We're not just telling jokes—we're creating experiences that connect with audiences on a deeper level.
-                </p>
-
-                <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Join us for the comedy events that are changing the game. Whether you're a comedy fan or a fellow performer, Slaughter Comedy welcomes you to be part of something special and truly unforgettable.
-                </p>
+                  <a
+                    href="https://www.facebook.com/SlaughterComedy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mx-auto flex w-fit gold-gradient text-[#2B2B2B] font-bold px-8 py-4 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center"
+                  >Follow Slaughter Comedy
+                  </a>
               </div>
             </div>
           </div>

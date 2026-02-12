@@ -1,6 +1,7 @@
 import React from 'react';
 import './MakingSenseHero.css';
 import { useState, useEffect } from 'react';
+import image1 from '../assets/podcastPageImage1.jpg';
 
 
 
@@ -19,7 +20,7 @@ function MakingSenseHero() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: '../assets/heroImage1.jpg',
+              backgroundImage: `url(${image1})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               transform: `translateY(${scrollY * 0.5}px)`,

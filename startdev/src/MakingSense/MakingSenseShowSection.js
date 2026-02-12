@@ -1,6 +1,7 @@
 import React from 'react';
 import './MakingSenseShowSection.css';
 import { useState, useEffect } from 'react';
+import image2 from '../assets/eventsPageImage2.jpg';
 
 
 
@@ -13,7 +14,7 @@ function MakingSenseShowSection() {
               {/* Image Left */}
               <div className="order-first">
                 <img
-                  src='../assets/heroImage1.jpg'
+                  src={image2}
                   alt="Making Sense with Sanchez"
                   className="w-full h-96 md:h-[500px] object-cover rounded-2xl shadow-2xl border-4 border-[#D4AF37]"
                   loading="lazy"
@@ -28,16 +29,16 @@ function MakingSenseShowSection() {
               {/* Text Right */}
               <div className="space-y-6">
                 <h2 className="font-display text-5xl font-bold text-[#D4AF37]">
-                  A Show Making Waves
+                  Making Sense with Sanchez N Slaughter
                 </h2>
                 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  "Making Sense with Sanchez" is a groundbreaking comedy podcast and YouTube show that brings together the best of Vegas comedy. Hosted by Sanchez, each episode features raw, unfiltered conversations with comedians, performers, and entertainment industry professionals who aren't afraid to speak their minds.
+                  Making Sense with Sanchez N Slaughter Facebook represents the collaborative efforts of Sanchez and Slaughter and serves as a source to access our broadcast content as well as a place to interact with us. We hope you enjoy the shared insights!
                 </p>
 
-                <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
+                {/* <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
                   The show cuts through the noise and gets to the heart of what makes comedy work. From hilarious stories to serious discussions about the craft, "Making Sense with Sanchez" is your backstage pass to the Vegas comedy scene. New episodes drop weekly, so tune in and join the conversation that's changing the comedy game.
-                </p>
+                </p> */}
 
                 {/* Buttons */}
                 <div className="flex flex-col md:flex-row gap-4 pt-6">
