@@ -19,6 +19,26 @@ function HeroSection({ onNavigate, config = heroConfig }) {
         return () => clearInterval(timer);
       }, [currentSlide, isTransitioning]);
 
+      useEffect(() => {
+
+        
+        // Play the current video
+        if (videoRefs.current[currentSlide]) {
+          videoRefs.current[currentSlide].play().catch(err => {
+            console.log('Autoplay prevented:', err);
+          });
+        }
+        
+        // Pause all other videos
+        videoRefs.current.forEach((video, index) => {
+          if (video && index !== currentSlide) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      }, [currentSlide]);
+      
+
       const nextSlide = () => {
         setIsTransitioning(true);
         setCurrentSlide((prev) => (prev + 1) % config.media.length);
@@ -62,6 +82,7 @@ function HeroSection({ onNavigate, config = heroConfig }) {
                     className="w-full h-full object-cover"
                     src={item.src}
                     poster={item.poster}
+                    // autoPlay
                     muted
                     loop
                     playsInline
