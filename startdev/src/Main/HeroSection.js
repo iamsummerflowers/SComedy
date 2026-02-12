@@ -61,7 +61,7 @@ function HeroSection({ onNavigate, config = heroConfig }) {
 
   
   return (
-        <section className="h-screen min-h-full overflow-hidden pt-20 max-w-7xl mx-auto">
+        <section className="relative h-screen min-h-[600px] overflow-hidden pt-20">
           {/* Media Carousel */}
           <div className="absolute inset-0 overflow-hidden">
             {config.media.map((item, index) => (
