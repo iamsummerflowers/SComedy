@@ -12,9 +12,9 @@ function DoubleVideoSection() {
   return (
         <section className="w-full bg-gradient-to-b from-[#1a1a1a] to-[#2B2B2B] px-6 py-20">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-[#D4AF37] text-center mb-12">
+            {/* <h2 className="font-display text-4xl md:text-5xl font-bold text-[#D4AF37] text-center mb-12">
               Recent Performances
-            </h2>
+            </h2> */}
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Video 1 */}
