@@ -2,6 +2,7 @@ import React from 'react';
 import './CurrentEventsSection.css';
 import { useState } from 'react';
 
+import image2 from '../assets/eventsPageImage2.jpg';
 
 
 function CurrentEventsSection({ onNavigate }) {
@@ -17,9 +18,19 @@ function CurrentEventsSection({ onNavigate }) {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Image Section */}
               <div>
-                <h3 className="text-2xl font-bold text-[#F5F5DC] mb-6 text-center">HOT 7025 FM</h3>
+                <h3 className="text-2xl font-bold text-[#F5F5DC] mb-6 text-center">
+                  {/* HOT 7025 FM */}
+                                  <a
+                  href="https://hot7025fm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl font-bold text-blue-500 hover:text-yellow-400 transition-colors xxunderline"
+                >
+                  HOT 7025 FM
+                </a>
+                </h3>
                 <img
-                  src='../assets/heroImage1.jpg'
+                  src={image2}
                   alt="HOT 7025 FM Event"
                   className="w-full h-96 object-cover rounded-xl shadow-2xl border-2 border-[#D4AF37]"
                   loading="lazy"
@@ -37,17 +48,17 @@ function CurrentEventsSection({ onNavigate }) {
                   href="https://www.facebook.com/hot7025fm/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl font-bold text-blue-500 hover:text-blue-400 transition-colors underline"
+                  className="text-2xl font-bold text-blue-500 hover:text-yellow-400 transition-colors underline"
                 >
                   Every Wednesday from 5:00 - 6:00 PM
                 </a>
 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Join us every Wednesday evening as we host the popular HOT 7025 FM radio show live from our venue. This weekly event has become a staple in the Vegas comedy community, bringing together some of the funniest people in the business.
+                  Minority Report featuring <button onClick={() => onNavigate('making-sense')} className="w-fit text-blue-500 hover:text-yellow-400 underline font-semibold">Sanchez and Slaughter</button> (S2)
                 </p>
 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Featured on this week's show is our own <button onClick={() => onNavigate('making-sense')} className="text-blue-500 hover:text-blue-400 underline font-semibold">Sanchez</button> from the "Making Sense" series. Get ready for an evening of laughs, behind-the-scenes stories, and live entertainment that captures the raw energy of Vegas comedy.
+                 #MinorityReport #HOT7025FM #minoritybusiness #minorityreport #minoritymentalhealth
                 </p>
               </div>
             </div>

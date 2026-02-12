@@ -1,7 +1,9 @@
 import React from 'react';
 import './UpcomingEventsSection.css';
 import { useState } from 'react';
-
+import image3 from '../assets/upcomingEventsImage3.jpg';
+import image4 from '../assets/upcomingEventsImage4.jpg';
+import image5 from '../assets/upcomingEventsImage5.jpg';
 
 
 function UpcomingEventsSection({ onNavigate }) {
@@ -9,23 +11,18 @@ function UpcomingEventsSection({ onNavigate }) {
       const upcomingEvents = [
         {
           title: "Slaughter Comedy Night",
-          image: '../assets/heroImage1.jpg',
-          date: "This Friday - 9:00 PM"
+          image: image3,
+          date: "This Saturday - 9:00 PM"
         },
         {
           title: "Stand-Up Showcase",
-          image: '../assets/heroImage1.jpg',
+          image: image4,
           date: "Next Saturday - 10:00 PM"
         },
         {
           title: "Comedy Open Mic",
-          image: '../assets/heroImage1.jpg',
+          image: image5,
           date: "Tuesday - 8:00 PM"
-        },
-        {
-          title: "Celebrity Comedy Show",
-          image: '../assets/heroImage1.jpg',
-          date: "Next Month - TBA"
         }
       ];
   
@@ -36,7 +33,7 @@ function UpcomingEventsSection({ onNavigate }) {
               Upcoming Events
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {upcomingEvents.map((event, index) => (
                 <div key={index} className="bg-[#2B2B2B] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 border border-[#D4AF37]/30">
                   <img
@@ -51,16 +48,16 @@ function UpcomingEventsSection({ onNavigate }) {
                     }}
                   />
                   <div className="p-6">
-                    <h3 className="font-bold text-xl text-[#F5F5DC] mb-2">{event.title}</h3>
-                    <p className="text-[#D4AF37] text-sm mb-6">{event.date}</p>
-                    <a
+                    <h3 className="text-center font-bold text-xl text-[#F5F5DC] mb-2">{event.title}</h3>
+                    {/* <p className="text-[#D4AF37] text-sm mb-6">{event.date}</p> */}
+                    {/* <a
                       href="https://www.facebook.com/SlaughterComedy/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full bg-[#8B1538] hover:bg-[#A91E4A] text-white font-bold py-3 rounded-lg text-center transition-all duration-300 hover:scale-105"
                     >
                       Register
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               ))}

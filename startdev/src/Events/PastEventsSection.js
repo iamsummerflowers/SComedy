@@ -2,21 +2,30 @@ import React from 'react';
 import './PastEventsSection.css';
 import { useState } from 'react';
 
-
+import image6 from '../assets/upcomingEventsImage3.jpg';
+import image7 from '../assets/pastEventsImage7.png';
+import image8 from '../assets/mediaConfigImage17f.png';
+import image9 from '../assets/pastEventsImage9.png';
+import image10 from '../assets/pastEventsImage10.png';
+import image11 from '../assets/pastEventsImage7.png';
+import image12 from '../assets/pastEventsImage12.jpg';
+import image13 from '../assets/pastEventsImage13.jpg';
+import image14 from '../assets/mediaConfigImage20f.jpg';
+import image15 from '../assets/pastEventsImage15.jpg';
 
 function PastEventsSection({ onNavigate }) {
 
       const pastEvents = [
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg'
+        image6,
+        image7,
+        image8,
+        image9,
+        image10,
+        image11,
+        image12,
+        image13,
+        image14,
+        image15
       ];
   
   return (
@@ -35,7 +44,7 @@ function PastEventsSection({ onNavigate }) {
                   <img
                     src={image}
                     alt={`Past Event ${index + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover bg-center"
                     loading="lazy"
                     onError={(e) => {
                       console.error('Image failed to load:', e.target.src);
@@ -44,7 +53,7 @@ function PastEventsSection({ onNavigate }) {
                     }}
                   />
                   <div className="absolute inset-0 bg-black/0 hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <p className="text-white font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Event #{index + 1}</p>
+                    <p className="text-center text-white font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Event #{index + 1}</p>
                   </div>
                 </div>
               ))}
