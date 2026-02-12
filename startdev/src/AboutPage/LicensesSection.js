@@ -1,6 +1,8 @@
 import React from 'react';
 import './LicensesSection.css';
 import { useState } from 'react';
+import image5 from '../assets/businessLicImage1.jpg';
+import image6 from '../assets/businessLicImage1.jpg';
 
 
 function LicensesSection() {
@@ -15,10 +17,10 @@ function LicensesSection() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* License 1 */}
-              <div className="flex justify-center">
-                <div className="w-64 h-80 rounded-xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
+              <div className="flex justify-end">
+                <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop"
+                    src={image5}
                     alt="Nevada Business License"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -32,10 +34,10 @@ function LicensesSection() {
               </div>
 
               {/* License 2 */}
-              <div className="flex justify-center">
-                <div className="w-64 h-80 rounded-xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
+              <div className="flex justify-start">
+                <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
                   <img
-                    src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=300&h=400&fit=crop"
+                    src={image6}
                     alt="Entertainment Venue Certification"
                     className="w-full h-full object-cover"
                     loading="lazy"

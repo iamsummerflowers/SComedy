@@ -1,6 +1,8 @@
 import React from 'react';
 import './AboutBobbyHero.css';
 import { useState, useEffect } from 'react';
+import image1 from '../assets/aboutConfigImage1.jpg';
+import image2 from '../assets/aboutPageImage2.jpg';
 
 
 function AboutBobbyHero() {
@@ -19,7 +21,7 @@ function AboutBobbyHero() {
           <div
             className="parallax-bg"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1920&h=1080&fit=crop')`,
+              backgroundImage: `url(${image2})`,
               transform: `translateY(${scrollY * 0.5}px)`
             }}
           />
@@ -30,9 +32,9 @@ function AboutBobbyHero() {
           {/* Content */}
           <div className="relative z-20 flex flex-col items-center justify-center text-center px-6">
             {/* Circular Image */}
-            <div className="mb-10 relative">
+            <div className="flex justify-center mb-10 relative">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                src= {image1}
                 alt="Bobby"
                 className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-[#D4AF37] shadow-2xl"
                 loading="lazy"
@@ -51,7 +53,7 @@ function AboutBobbyHero() {
 
             {/* Subheading */}
             <p className="text-2xl md:text-3xl text-[#F5F5DC]/90 drop-shadow-lg">
-              Owner
+              Owner of Slaughter Comedy LLC
             </p>
           </div>
         </section>

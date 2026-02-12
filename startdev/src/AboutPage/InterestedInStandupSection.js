@@ -15,7 +15,7 @@ function InterestedInStandupSection({ onNavigate }) {
 
             <div className="space-y-6 text-center">
               <p className="text-lg text-[#F5F5DC]/80">
-                Vegas has an incredible comedy scene with tons of opportunities to develop your craft and get stage time.
+                The definitive list of Las Vegas comedy open mics is kept on a facebook document and also embedded in the posts below.vvIt also lives in the pinned post at the top of two facebook groups:
               </p>
 
               <p className="text-lg text-[#F5F5DC]/80">
@@ -27,7 +27,7 @@ function InterestedInStandupSection({ onNavigate }) {
                 >
                   Las Vegas Comedy Shows
                 </a>
-                {" "}is a great resource where you can connect with other comedians and find local show opportunities.
+                {" "} only allows posts about local comedy shows. We keep the post volume to a minimum so fans can know what’s going on without scrolling through a bunch of crap or drowning in notifications.
               </p>
 
               <p className="text-lg text-[#F5F5DC]/80">
@@ -39,7 +39,7 @@ function InterestedInStandupSection({ onNavigate }) {
                 >
                   Las Vegas Comedians (Discussion & Open Mics)
                 </a>
-                {" "}is another fantastic community where local comedians discuss the scene and share open mic opportunities.
+                {" "}is for comedians/producers that live in Vegas, got started there, or come through often. It allows discussion and posting stage time offers (like open mics).
               </p>
 
               <p className="text-lg text-[#F5F5DC]/80 mt-8">
@@ -48,7 +48,7 @@ function InterestedInStandupSection({ onNavigate }) {
 
               <button
                 onClick={() => onNavigate('resources')}
-                className="inline-block mt-6 gold-gradient text-[#2B2B2B] font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="w-fit inline-block mt-6 gold-gradient text-[#2B2B2B] font-semibold px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 Check Out Resources
               </button>

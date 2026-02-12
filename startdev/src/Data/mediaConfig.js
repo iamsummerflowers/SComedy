@@ -10,7 +10,7 @@ import image9 from '../assets/mediaConfigImage9.jpg';
 import image10 from '../assets/mediaConfigImage10.jpg';
 import image11 from '../assets/mediaConfigImage11.jpg';
 import image12 from '../assets/mediaConfigImage12f.jpg';
-// import image13 from '../assets/mediaConfigImage13.jpg';
+import image13 from '../assets/mediaConfigImage13.jpg';
 import image14 from '../assets/mediaConfigImage14f.jpg';
 import image15 from '../assets/mediaConfigImage15.jpg';
 import image16 from '../assets/mediaConfigImage16.jpg';
