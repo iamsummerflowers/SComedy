@@ -1,7 +1,7 @@
 import React from 'react';
 import './SingleVideoSection.css';
 import { useState, useEffect } from 'react';
-import video1 from '../assets/heroVideo1.mp4';
+import video1 from '../assets/scMediaShow.mp4';
 
 
 
@@ -26,11 +26,13 @@ function SingleVideoSection() {
               <div className="relative pb-[56.25%] bg-black rounded-2xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
                 <video
                   className="absolute top-0 left-0 w-full h-full"
-                  src = '../assets/heroVideo1.mp4'
-                  poster='../assets/heroImage1.jpg'
+                  src = {video1}
+                  poster= '../assets/heroImage1.jpg'
                   controls
                   muted
                   playsInline
+                  // autoplay
+                  // picture-in-picture
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#D4AF37]/30 rounded-2xl -z-10" />

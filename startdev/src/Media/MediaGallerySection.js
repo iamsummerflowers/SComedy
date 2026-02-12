@@ -1,8 +1,28 @@
 import React from 'react';
 import './MediaGallerySection.css';
 import { useState, useEffect } from 'react';
-import image1 from '../assets/heroImage1.jpg';
-
+import image1 from '../assets/mediaConfigImage1.jpg';
+import image2 from '../assets/mediaConfigImage2.jpg';
+import image3 from '../assets/mediaConfigImage3.jpg';
+import image4 from '../assets/mediaConfigImage4.jpg';
+import image5 from '../assets/mediaConfigImage5.jpg';
+import image6 from '../assets/mediaConfigImage6.jpg';
+import image7 from '../assets/mediaConfigImage7.jpg';
+import image8 from '../assets/mediaConfigImage8.jpg';
+import image9 from '../assets/mediaConfigImage9.jpg';
+import image10 from '../assets/mediaConfigImage10.jpg';
+import image11 from '../assets/mediaConfigImage11.jpg';
+import image12 from '../assets/mediaConfigImage12f.jpg';
+import image13 from '../assets/mediaConfigImage13.jpg';
+import image14 from '../assets/mediaConfigImage14f.jpg';
+import image15 from '../assets/mediaConfigImage15.jpg';
+import image16 from '../assets/mediaConfigImage16.jpg';
+import image17 from '../assets/mediaConfigImage17f.png';
+import image18 from '../assets/mediaConfigImage18.jpg';
+import image19 from '../assets/mediaConfigImage19.jpg';
+import image20 from '../assets/mediaConfigImage20f.jpg';
+import image21 from '../assets/mediaConfigImage21.jpg';
+import image22 from '../assets/mediaConfigImage22f.jpg';
 
 
 function MediaGallerySection() {
@@ -12,36 +32,25 @@ function MediaGallerySection() {
 
       // 25 gallery images
       const galleryImages = [
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg',
-        '../assets/heroImage1.jpg'
+        image1,
+        image2,
+        image3,
+        image4,
+        image5,
+        image6,
+        image7,
+        image8,
+        image9,
+        image10,
+        image11,
+        image12,
+        image14,
+        image15,
+        image16,
+        image17,
+        image18,
+        image19,
+        image20
 
       ];
 
@@ -115,7 +124,7 @@ function MediaGallerySection() {
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-6 right-6 text-white text-4xl hover:text-[#D4AF37] transition-colors z-60"
+                className="w-fit absolute top-6 w-fit flex right-10 text-white text-4xl hover:text-[#D4AF37] transition-colors z-60"
                 title="Close (ESC)"
               >
                 ×
@@ -124,7 +133,7 @@ function MediaGallerySection() {
               {/* Previous Button */}
               <button
                 onClick={prevImage}
-                className="absolute left-6 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-[#D4AF37] transition-colors p-4 hover:bg-black/30 rounded-lg"
+                className="w-fit absolute left-6 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-[#D4AF37] transition-colors p-4 hover:bg-black/30 rounded-lg"
                 title="Previous (←)"
               >
                 ‹
@@ -141,21 +150,21 @@ function MediaGallerySection() {
               {/* Next Button */}
               <button
                 onClick={nextImage}
-                className="absolute right-6 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-[#D4AF37] transition-colors p-4 hover:bg-black/30 rounded-lg"
+                className="w-fit absolute right-6 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-[#D4AF37] transition-colors p-4 hover:bg-black/30 rounded-lg"
                 title="Next (→)"
               >
                 ›
               </button>
 
               {/* Counter */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg font-semibold bg-black/50 px-6 py-2 rounded-full">
+              <div className="w-fit absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg font-semibold bg-black/50 px-6 py-2 rounded-full">
                 {currentImage + 1} / {galleryImages.length}
               </div>
 
               {/* Keyboard Instructions */}
-              <div className="absolute bottom-6 right-6 text-[#D4AF37]/70 text-sm">
+              {/* <div className="absolute bottom-6 right-6 text-[#D4AF37]/70 text-sm">
                 ��� ��� Arrow keys to navigate
-              </div>
+              </div> */}
             </div>
           )}
         </section>

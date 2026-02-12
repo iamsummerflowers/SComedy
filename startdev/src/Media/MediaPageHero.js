@@ -1,6 +1,7 @@
 import React from 'react';
 import './MediaPageHero.css';
 import { useState, useEffect } from 'react';
+import image1 from '../assets/testimonialsPageImage1.jpg';
 
 
 function MediaPageHero() {
@@ -19,7 +20,7 @@ function MediaPageHero() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: '../assets/heroImage1.jpg',
+              backgroundImage: `url(${image1})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               transform: `translateY(${scrollY * 0.5}px)`,
