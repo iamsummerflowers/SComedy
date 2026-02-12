@@ -67,7 +67,7 @@ function Footer({ config = footerConfig }) {
         </div>
         </div>
         <div class="border-t border-[#D4AF37]/20 pt-8 text-center">
-        <p class="w-fit text-center mx-auto text-[#F5F5DC]/60 text-sm">{currentYear} Beyond Sight Solutions.</p>
+        <p class="w-fit text-center mx-auto text-[#F5F5DC]/60 text-sm">{currentYear} Slaughter Comedy LLC.</p>
         <p class="w-fit text-center mx-auto text-[#F5F5DC]/60 text-sm">All rights reserved.</p>
 
         </div>
