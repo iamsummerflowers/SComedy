@@ -70,7 +70,7 @@ function Navbar({onNavigate }) {
                   onClick={() => handleNavClick('media')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors"
                 >
-                  Media
+                  Gallery
                 </button>
                 <button
                   onClick={() => handleNavClick('making-sense')}
@@ -128,7 +128,7 @@ function Navbar({onNavigate }) {
                   onClick={() => handleNavClick('media')}
                   className="text-[#2B2B2B] font-semibold hover:text-[#8B1538] transition-colors text-left"
                 >
-                  Media
+                  Gallery
                 </button>
                 <button
                   onClick={() => handleNavClick('making-sense')}

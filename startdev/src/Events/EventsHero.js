@@ -1,10 +1,11 @@
 import React from 'react';
-import './MediaPageHero.css';
+import './EventsHero.css';
 import { useState, useEffect } from 'react';
-import image1 from '../assets/testimonialsPageImage1.jpg';
+import image1 from '../assets/eventsPageImage1.jpg';
 
 
-function MediaPageHero() {
+
+function EventsHero() {
 
       const [scrollY, setScrollY] = useState(0);
 
@@ -34,11 +35,11 @@ function MediaPageHero() {
           {/* Content */}
           <div className="relative z-20 text-center">
             <h1 className="font-display text-7xl md:text-8xl font-bold text-[#D4AF37] drop-shadow-lg">
-              Gallery & Vidz
+              Check out our Events
             </h1>
           </div>
         </section>
   );
 }
 
-export default MediaPageHero;
+export default EventsHero;

@@ -28,6 +28,7 @@ import LicensesSection from './AboutPage/LicensesSection.js';
 import InterestedInStandupSection from './AboutPage/InterestedInStandupSection.js';
 
 // -- EVENTS
+import EventsHero from './Events/EventsHero.js';
 import CurrentEventsSection from './Events/CurrentEventsSection.js';
 import UpcomingEventsSection from './Events/UpcomingEventsSection.js';
 import PastEventsSection from './Events/PastEventsSection.js';
@@ -118,14 +119,15 @@ function App() {
           )}
         {currentPage === 'events' && (
             <>
-              <HeroSection config={{
+              {/* <HeroSection config={{
                 heading: "Events at Vegas Comedy Club",
                 subtext: "Upcoming shows, live recordings, and comedy celebrations",
                 buttonText: "See Events",
                 media: [
                   { type: 'image', src: image1, alt: 'Comedy Stage' }
                 ]
-              }} onNavigate={handleNavigate} />
+              }} onNavigate={handleNavigate} /> */}
+              <EventsHero/>
               <CurrentEventsSection />
               <UpcomingEventsSection />
               <PastEventsSection />
