@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventsHero.css';
 import { useState, useEffect } from 'react';
-import image1 from '../assets/eventsPageImage1.jpg';
+import image1 from '../assets/testimonialsPageImage1.jpg';
 
 
 
