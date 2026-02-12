@@ -7,7 +7,7 @@ function BlurbSection3({ config = blurb3Config }) {
 
   
   return (
-        <section className="py-20 px-6 bg-[#3D3D3D]">
+        <section className="pt-20 px-6 bg-[#3D3D3D]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[#D4AF37] mb-8">
               {config.heading}

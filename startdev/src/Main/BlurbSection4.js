@@ -16,9 +16,11 @@ function BlurbSection4({ onNavigate, config = blurb4Config }) {
                   className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
                   src={config.videoUrl}
                   poster={config.videoPoster}
+                  preload= "auto"
                   controls
                   muted
                   playsInline
+                  autoPlay
                 />
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-4 border-[#D4AF37] rounded-2xl -z-10" />
               </div>

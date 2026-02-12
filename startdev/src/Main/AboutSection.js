@@ -49,8 +49,11 @@ function AboutSection({ onNavigate, config = aboutConfig }) {
                 {/* Social Links */}
                 <div className="flex flex-wrap gap-4">
                   {config.socials.map((social, index) => (
-                    <button
+                    <a
                       key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="social-btn w-10 h-10 rounded-full flex items-center justify-center"
                       style={{ backgroundColor: social.color }}
                       title={social.name}
@@ -58,7 +61,7 @@ function AboutSection({ onNavigate, config = aboutConfig }) {
                       <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d={social.icon} />
                       </svg>
-                    </button>
+                    </a>
                   ))}
                 </div>
 

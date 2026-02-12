@@ -105,7 +105,7 @@ function HeroSection({ onNavigate, config = heroConfig }) {
               {config.subtext}
             </p>
             <button
-              onClick={() => {}}
+              onClick={() => onNavigate('about-bobby')}
               className="w-fit gold-gradient text-[#2B2B2B] font-semibold px-10 py-4 rounded-full text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in"
               style={{ animationDelay: '0.2s' }}
             >
