@@ -44,6 +44,9 @@ import MakingSenseShowSection from './MakingSense/MakingSenseShowSection.js';
 import MakingSenseAboutSection from './MakingSense/MakingSenseAboutSection.js';
 import SlaughterComedySection from './MakingSense/SlaughterComedySection.js';
 
+// -- RESOURCES
+import ResourcesHero from './Resources/ResourcesHero.js';
+import Resources from './Resources/Resources.js';
 
 
 // --FOOTER
@@ -90,13 +93,19 @@ function App() {
             </>
           )}
           {currentPage === 'resources' && (
-            <div className="min-h-screen flex flex-col items-center justify-center p-8">
-              <h1 className="font-display text-5xl text-[#D4AF37] mb-8">Resources Page</h1>
-              <p className="text-[#F5F5DC] text-xl mb-8">Curated resources for aspiring comedians coming soon...</p>
-              <button onClick={() => handleNavigate('home')} className="gold-gradient text-[#2B2B2B] px-8 py-4 rounded-full font-semibold">
-                Back to Home
-              </button>
-            </div>
+            // <div className="min-h-screen flex flex-col items-center justify-center p-8">
+            //   <h1 className="font-display text-5xl text-[#D4AF37] mb-8">Resources Page</h1>
+            //   <p className="text-[#F5F5DC] text-xl mb-8">Curated resources for aspiring comedians coming soon...</p>
+            //   <button onClick={() => handleNavigate('home')} className="gold-gradient text-[#2B2B2B] px-8 py-4 rounded-full font-semibold">
+            //     Back to Home
+            //   </button>
+            // </div>
+            <>
+              <ResourcesHero onNavigate={handleNavigate} />
+              <Resources onNavigate={handleNavigate} />
+              <Footer />
+              <ScrollToTop />
+            </>
           )}
           {currentPage === 'contact' && (
             <div className="min-h-screen flex flex-col items-center justify-center p-8">
@@ -114,19 +123,18 @@ function App() {
                 subtext: "Upcoming shows, live recordings, and comedy celebrations",
                 buttonText: "See Events",
                 media: [
-                  { type: 'image', src: image1, alt: 'Comedy Stage' },
-                  { type: 'image', src: image1, alt: 'Audience' }
+                  { type: 'image', src: image1, alt: 'Comedy Stage' }
                 ]
               }} onNavigate={handleNavigate} />
               <CurrentEventsSection />
               <UpcomingEventsSection />
               <PastEventsSection />
-              <ContactSection />
+              {/* <ContactSection /> */}
               <Footer />
               <ScrollToTop />
             </>
           )}
-          {currentPage === 'services' && (
+          {/* {currentPage === 'services' && (
             <div className="min-h-screen flex flex-col items-center justify-center p-8">
               <h1 className="font-display text-5xl text-[#D4AF37] mb-8">Services Page</h1>
               <p className="text-[#F5F5DC] text-xl mb-8">Full services details coming soon...</p>
@@ -134,7 +142,7 @@ function App() {
                 Back to Home
               </button>
             </div>
-          )}
+          )} */}
           {currentPage === 'media' && (
             <>
               <MediaPageHero />
