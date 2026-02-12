@@ -31,9 +31,11 @@ function Footer({ config = footerConfig }) {
         <div class="text-center">
           <h3 class="font-display text-2xl font-bold text-[#D4AF37] mx-auto mb-6">Get In Touch</h3>
           <div class="space-y-4">
-          <div class="flex items-center justify-center gap-3"><span class="w-fit text-[#D4AF37] text-2xl">☎</span> <a href="tel:888-888-8888" class="w-fit text-[#F5F5DC] hover:text-[#D4AF37] transition-colors font-semibold"> 888-888-8888 </a>
+          <div class="flex items-center justify-center gap-3"><span className="w-fit text-[#D4AF37] text-2xl">☎</span> <a href="tel: (601) 981 8356" className="w-fit text-[#F5F5DC] hover:text-[#D4AF37] transition-colors font-semibold">  (601) 981 8356 </a>
           </div>
-          <div class="flex items-center justify-center gap-3"><span class="w-fit text-[#D4AF37] text-2xl">✉</span> <a href="mailto:joesmith@email.com" class="w-fit text-[#F5F5DC] hover:text-[#D4AF37] transition-colors font-semibold"> joesmith@email.com </a>
+          <div class="flex items-center justify-center gap-3">
+              <span className="w-fit text-[#D4AF37] text-2xl">✉</span><a href="mailto:joesmith@email.com" className="w-fit text-[#F5F5DC] hover:text-[#D4AF37] transition-colors font-semibold"> bobbyslaughter@slaughtercomedy.com </a>
+
           </div>
           </div>
         </div>
