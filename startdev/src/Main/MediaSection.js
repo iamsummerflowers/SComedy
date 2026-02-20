@@ -81,29 +81,29 @@ function MediaSection({ onNavigate, config = mediaConfig }) {
             <div className="fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6">
               <button
                 onClick={closeModal}
-                className="absolute top-6 right-6 text-white text-4xl hover:text-[#D4AF37] transition-colors"
+                className="w-fit mx-auto absolute top-6 right-14 text-white text-4xl hover:text-[#D4AF37] transition-colors"
               >
                 ×
               </button>
               <button
                 onClick={prevImage}
-                className="absolute left-6 text-white text-4xl hover:text-[#D4AF37] transition-colors p-4"
+                className="w-fit absolute left-6 text-white text-4xl hover:text-[#D4AF37] transition-colors p-4"
               >
                 ‹
               </button>
               <img
                 src={config.images[currentImage]}
                 alt={`Gallery image ${currentImage + 1}`}
-                className="max-w-full max-h-[80%] object-contain rounded-xl"
+                className="w-2/3 max-w-full max-h-[80%] object-contain rounded-xl"
                 loading="lazy"
               />
               <button
                 onClick={nextImage}
-                className="absolute right-6 text-white text-4xl hover:text-[#D4AF37] transition-colors p-4"
+                className="w-fit absolute right-6 text-white text-4xl hover:text-[#D4AF37] transition-colors p-4"
               >
                 ›
               </button>
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg">
+              <div className="w-fit absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-lg">
                 {currentImage + 1} / {config.images.length}
               </div>
             </div>
