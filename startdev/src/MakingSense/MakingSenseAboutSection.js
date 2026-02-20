@@ -6,9 +6,10 @@ import image3 from '../assets/podcastPageImage3.jpg';
 
 
 function MakingSenseAboutSection() {
-  
+
+
   return (
-        <section className="py-20 px-6 bg-gradient-to-b from-[#2B2B2B] to-[#1a1a1a]">
+        <section className="py-20 px-6 bg-gradient-to-b from-[#2B2B2B] to-[#1a1a1a]" id="making-sense">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Text Left */}

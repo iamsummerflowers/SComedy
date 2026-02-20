@@ -128,7 +128,7 @@ function App() {
                 ]
               }} onNavigate={handleNavigate} /> */}
               <EventsHero onNavigate={handleNavigate}/>
-              <CurrentEventsSection />
+              <CurrentEventsSection onNavigate={handleNavigate}/>
               <UpcomingEventsSection />
               <PastEventsSection />
               {/* <ContactSection /> */}

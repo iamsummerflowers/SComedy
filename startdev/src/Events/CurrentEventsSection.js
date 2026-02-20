@@ -54,7 +54,13 @@ function CurrentEventsSection({ onNavigate }) {
                 </a>
 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">
-                  Minority Report featuring <button onClick={() => onNavigate('making-sense')} className="w-fit text-blue-500 hover:text-yellow-400 underline font-semibold">Sanchez and Slaughter</button> (S2)
+                  Minority Report featuring{' '}  
+                     
+                    <button 
+                      onClick={() => onNavigate('making-sense')} 
+                      className="w-fit text-blue-500 hover:text-yellow-400 underline font-semibold">
+                        Sanchez and Slaughter
+                    </button> (S2)
                 </p>
 
                 <p className="text-lg text-[#F5F5DC]/80 leading-relaxed">

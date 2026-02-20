@@ -1,32 +1,56 @@
 import React from 'react';
 import './ContactSection.css';
 import {contactConfig} from '../Data/contactConfig';
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 
 function ContactSection({ config = contactConfig }) {
 
-      const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+
+  const form = useRef();
+  const [messageSent, setMessageSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_ygkfx7s',
+      'template_d66swgn',
+      form.current,
+      'zFLZH29bRNDazrYni'
+      ).then((result) => {
+        setMessageSent(true);  
+        console.log(result.text);
+        console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+          console.log("message in error");
       });
-      const [submitted, setSubmitted] = useState(false);
+  };
 
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          setFormData({ name: '', email: '', subject: '', message: '' });
-        }, 3000);
-      };
+  // original is above
 
-      const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-      };
+      // const [formData, setFormData] = useState({
+      //   name: '',
+      //   email: '',
+      //   subject: '',
+      //   message: ''
+      // });
+      // const [submitted, setSubmitted] = useState(false);
+
+      // const handleSubmit = (e) => {
+      //   e.preventDefault();
+      //   setSubmitted(true);
+      //   setTimeout(() => {
+      //     setSubmitted(false);
+      //     setFormData({ name: '', email: '', subject: '', message: '' });
+      //   }, 3000);
+      // };
+
+      // const handleChange = (e) => {
+      //   setFormData({ ...formData, [e.target.name]: e.target.value });
+      // };
 
 
   
@@ -72,11 +96,14 @@ function ContactSection({ config = contactConfig }) {
             </div> */}
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="z-30 bg-[#2B2B2B] p-8 rounded-2xl border border-[#D4AF37]/30"
-            style={{ backgroundImage: `url(${config.contactImage})` }}
+            <form 
+              ref={form} onSubmit={sendEmail}
+              // onSubmit={handleSubmit} 
+              className="z-30 bg-[#2B2B2B] p-8 rounded-2xl border border-[#D4AF37]/30"
+              style={{ backgroundImage: `url(${config.contactImage})` }}
             >
-              {submitted ? (
-                <div className="text-center py-12">
+              {/* {submitted ? ( */}
+                {/* <div className="text-center py-12">
                   
                   <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,17 +112,17 @@ function ContactSection({ config = contactConfig }) {
                   </div>
                   <h3 className="text-2xl font-bold text-[#D4AF37] mb-2">Message Sent!</h3>
                   <p className="text-[#F5F5DC]/70">We'll get back to you soon.</p>
-                </div>
-              ) : (
+                </div> */}
+              {/* ) : ( */}
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-[#F5F5DC] mb-2 font-medium">{config.fields.name}</label>
                     <input
                       type="text"
                       id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
+                      name="user_name"
+                      // value={formData.name}
+                      // onChange={handleChange}
                       required
                       className="w-3/5 px-4 py-3 bg-[#1a1a1a] border border-[#6B4C7C]/50 rounded-lg text-[#F5F5DC] focus:border-[#D4AF37] focus:outline-none transition-colors"
                       placeholder="Your name"
@@ -106,9 +133,9 @@ function ContactSection({ config = contactConfig }) {
                     <input
                       type="email"
                       id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      name="user_email"
+                      // value={formData.email}
+                      // onChange={handleChange}
                       required
                       className="w-3/5 px-4 py-3 bg-[#1a1a1a] border border-[#6B4C7C]/50 rounded-lg text-[#F5F5DC] focus:border-[#D4AF37] focus:outline-none transition-colors"
                       placeholder="your@email.com"
@@ -120,8 +147,8 @@ function ContactSection({ config = contactConfig }) {
                       type="text"
                       id="subject"
                       name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
+                      // value={formData.subject}
+                      // onChange={handleChange}
                       required
                       className="w-3/5 px-4 py-3 bg-[#1a1a1a] border border-[#6B4C7C]/50 rounded-lg text-[#F5F5DC] focus:border-[#D4AF37] focus:outline-none transition-colors"
                       placeholder="Subject"
@@ -132,8 +159,8 @@ function ContactSection({ config = contactConfig }) {
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleChange}
+                      // value={formData.message}
+                      // onChange={handleChange}
                       required
                       rows="5"
                       className="w-ful px-4 py-3 bg-[#1a1a1a] border border-[#6B4C7C]/50 rounded-lg text-[#F5F5DC] focus:border-[#D4AF37] focus:outline-none transition-colors resize-none"
@@ -147,7 +174,8 @@ function ContactSection({ config = contactConfig }) {
                     {config.buttonText}
                   </button>
                 </div>
-              )}
+              {/* )} */}
+              {messageSent && <p>Thanks for submitting!</p>}
             </form>
 
 
